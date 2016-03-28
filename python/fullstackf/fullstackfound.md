@@ -159,3 +159,15 @@ make a file webserver.py
 
 As we make our website , code becomes repetitive and difficult to maintain
 Frameworks are collections of code that simplifies Web Development they take care of repetitive task , so we can focus on Uniqueness of the Project
+
+
+**Flask**
+
+
+
+**Rendering Templates**
+
+```python
+render_template('templatename.html', variable)
+```
+flask searches for templates inside the templates folder 
