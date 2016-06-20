@@ -129,7 +129,7 @@ Both strategies reduce to same final values as long as
 * both evaluations terminate
 
 
-If Termination is not garunteed
+If Termination is not guaranteed
 
 * If CBV evaluation of an expression e terminates, then CBN evaluation of e terminates , too.
 * The other direction is not true.
@@ -139,3 +139,24 @@ But if the type of a fucntion parameter starts with => it uses call-by-name
 ```scala
 def constOne(x: Int, y: => Int) = 1
 ```
+
+**Conditional Expressions**
+
+To express choosing between two alternatives, Scala has a conditional expression if-else. It looks like a if-else in Java , but is used for expressions, not statements
+```scala
+def abs(x: Int) = if (x >= 0) x else -x
+```
+x>=0 is a predicate, of type Boolean.
+
+**Value Definitions**
+We have seen that  function parameters can be passed by value or be passed by Name. The same distinction applies to Definitions
+The def form is "by_name" its righthand side is evaluated on each use.
+
+There is also a val, which is by-value.
+
+The right-hand side of a val definition is evaluated at the point of definition itself.
+
+**Recursive Definitions**
+
+Recursive functions need and explicit return type in Scala
+For non-recursive functions, the return type is optional
